@@ -1,0 +1,16 @@
+class ConversationManager:
+    def __init__(self, config):
+        self.config = config
+
+    def handle_conversation(self, intent):
+        # Handle the flow of the conversation based on the detected intent
+        if intent == "greeting":
+            return "Hello! How can I assist you with your trading today?"
+        elif intent == "market_query":
+            return "The market is looking strong today. Would you like me to analyze the trends?"
+        elif intent == "trend_query":
+            return "I see that you want to know about trends. Would you like me to check current market trends?"
+        elif intent == "exit":
+            return "Goodbye! Have a great day!"
+        else:
+            return "Sorry, I didn’t understand that. Can you ask me something else?"
